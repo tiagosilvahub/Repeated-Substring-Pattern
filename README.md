@@ -111,7 +111,7 @@ public boolean solve(String s) {
 }
 ```
 
-If you have a string that can be built by repeating a substring from it and you duplicate it, then you will be able to find the original string inside it:
+If you have a string that can be built by repeating a substring from it and you duplicate it, then you will be able to find the original string 'inside' it (where inside means that we ignore the first and last character as those obviously match S):
 
 Example:
 ```
@@ -146,6 +146,5 @@ SS = ssssssss = ssSss
 If S is not a repeat substring then there are at least 2 different patterns in it, a and b (a!=b) and we can express S as:
 ```
 S = ab
-SS = abab 
+SS = abab does not contain S 'inside'
 ```
-
