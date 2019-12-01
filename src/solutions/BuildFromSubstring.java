@@ -20,7 +20,7 @@ public class BuildFromSubstring implements Solution {
         return false;
     }
 
-    public boolean solveUsingStringRepeat(String s) {
+    public boolean solveUsingRepeat(String s) {
         int halfLength = s.length()/2 + 1;
         int length = s.length();
         for (int i = 1; i < halfLength; i++) {

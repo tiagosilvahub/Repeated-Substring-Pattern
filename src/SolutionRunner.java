@@ -1,13 +1,14 @@
 package src;
 
-import src.solutions.Solution;
-import src.solutions.BuildFromSubstring;
+import src.solutions.*;
 
 public class SolutionRunner {
     public static void main(String[] args) {
         Solution[] solutions =
                 new Solution[]{
                         new BuildFromSubstring(),
+                        new CheckAllPossibleSubstring(),
+                        new DuplicateOriginal()
                 };
 
         // add test cases
