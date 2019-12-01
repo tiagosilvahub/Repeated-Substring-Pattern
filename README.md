@@ -25,14 +25,10 @@ Explanation: It's the substring "abc" four times. (And the substring "abcabc" tw
 
 Solution 1, named BuildFromSubstring: for all possible substrings repeat the substring and then compare to the original string.
 
-Possible substrings are sizes 1 to half the original string, but only if the size of the substring is a divider of the length of the original string. For strings which the length is a prime number, the answer is always false unless they are always the same caracter.
+Possible substrings are sizes 1 to half the original string. In addition, we can skip all substring sizes that are not a divisor of the length of the original string (remainder == 0), because they will never satisfy the premise.
 
-for example:
-```
-Input: "abcabca"
-Output: false
-Explanation: Because the length of original string is a prime number, 7, there is no divider except 1, the only possible substring would be 'aaaaaaa'. 
-```
+For example, for strings which the length is a prime number we only need to check for a substring of size 1, meaning a repeating first character like 'aaaaaaa'. 
+
 
 Code
 ```
@@ -49,4 +45,8 @@ public boolean solve(String s) {
   return false;
 }
 ```
+
+A simple optimization that becomes obvious, instead of building the entire string in a loop, compare substring by substring:
+
+
 
