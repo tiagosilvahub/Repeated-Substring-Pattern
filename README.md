@@ -116,7 +116,7 @@ If you have a string that can be built by repeating a substring from it and you 
 Example:
 ```
 Original: "abab"
-Duplicated: "ab**abab**ab"
+Duplicated: "abababab"
 ```
 
 Explanation: Consider the original string S. If it has a substring s which repeated generates S, then we can say that S is:
@@ -143,8 +143,8 @@ S = ssss
 SS = ssssssss = ssSss
 ```
 
-If S is not a repeat substring then there are at least 2 different patterns in it, a and b (a!=b) and we can express S as:
+If S is not a repeat substring then there are at least 2 different patterns in it, t and l (t!=l) and we can express S as:
 ```
-S = ab
-SS = abab does not contain S 'inside'
+S = tl
+SS = tltl does not contain S 'inside'
 ```
